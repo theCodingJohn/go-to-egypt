@@ -1,38 +1,476 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-BoldItalic.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-ExtraLightItalic.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-BlackItalic.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-Regular.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-Italic.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-Light.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-ExtraLight.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-Black.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-LightItalic.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-Bold.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-UltraLightItalic.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-UltraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-Medium.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-MediumItalic.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-Thin.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-UltraLight.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk";
+  src: url("/src/assets/fonts/Aribau/AribauGrotesk-ThinItalic.woff2") format("woff2"), url("/src/assets/fonts/Aribau/AribauGrotesk-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Freight";
+  src: url("/src/assets/fonts/Freight/Freight-DispMedium.woff2") format("woff2"), url("/src/assets/fonts/Freight/Freight-DispMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freight";
+  src: url("/src/assets/fonts/Freight/Freight-DispLight.woff2") format("woff2"), url("/src/assets/fonts/Freight/Freight-DispLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freight";
+  src: url("/src/assets/fonts/Freight/Freight-DispBlack.woff2") format("woff2"), url("/src/assets/fonts/Freight/Freight-DispBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freight";
+  src: url("/src/assets/fonts/Freight/Freight-DispBoldSC.woff2") format("woff2"), url("/src/assets/fonts/Freight/Freight-DispBoldSC.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freight";
+  src: url("/src/assets/fonts/Freight/Freight-DispBook.woff2") format("woff2"), url("/src/assets/fonts/Freight/Freight-DispBook.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Core Sans G Rounded";
+  src: url("/src/assets/fonts/CoreSansG/CoreSansGRounded-MediumItalic.woff2") format("woff2"), url("/src/assets/fonts/CoreSansG/CoreSansGRounded-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Core Sans G Rounded";
+  src: url("/src/assets/fonts/CoreSansG/CoreSansGRounded-ExtraBoldItali.woff2") format("woff2"), url("/src/assets/fonts/CoreSansG/CoreSansGRounded-ExtraBoldItali.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Core Sans G Rounded";
+  src: url("/src/assets/fonts/CoreSansG/CoreSansGRounded-ExtraBold.woff2") format("woff2"), url("/src/assets/fonts/CoreSansG/CoreSansGRounded-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Core Sans G Rounded";
+  src: url("/src/assets/fonts/CoreSansG/CoreSansGRounded-Bold.woff2") format("woff2"), url("/src/assets/fonts/CoreSansG/CoreSansGRounded-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Core Sans G Rounded";
+  src: url("/src/assets/fonts/CoreSansG/CoreSansGRounded-BoldItalic.woff2") format("woff2"), url("/src/assets/fonts/CoreSansG/CoreSansGRounded-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Core Sans G Rounded";
+  src: url("/src/assets/fonts/CoreSansG/CoreSansGRounded-Medium.woff2") format("woff2"), url("/src/assets/fonts/CoreSansG/CoreSansGRounded-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1540px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+body {
+  color: #fefefe;
+}
+
+.brown {
+  color: #ad764a;
+}
+
+.white {
+  color: #fefefe;
+}
+
+.hero {
+  padding: 30px;
+  margin-top: 3.2rem;
   text-align: center;
+  line-height: 1.2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero .row {
+  margin: auto 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.hero .text-wrapper {
+  position: relative;
+}
+
+.hero .ancient-world {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Aribau Grotesk";
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2.3rem;
+  font-weight: 500;
+}
+
+.hero .ancient-world::after {
+  content: "";
+  position: absolute;
+  background-color: #ad764a;
+  bottom: -1.111rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 1.944rem;
+  height: 0.056rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-family: "Freight";
+  font-weight: 900;
+}
+
+.hero .line-break {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-position: center;
+  }
+  .hero .line-break {
+    display: inline-block;
+  }
+  .hero h1 {
+    font-size: 2.333rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (min-width: 992px) {
+  .hero h1 {
+    font-size: 3.111rem;
+  }
+}
+
+.header {
+  height: calc(100vh + 22rem);
+  background: url(/src/assets/img/background.png) no-repeat top;
+  background-size: cover;
+}
+
+.nav {
+  padding: 0 1.875rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.nav .logo {
+  font-size: 1.8rem;
+  font-family: "Core Sans G Rounded";
+  font-weight: 800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav .logo .white {
+  position: relative;
+  left: 0.3rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-position: center;
   }
-  to {
-    transform: rotate(360deg);
+  .nav {
+    height: 7rem;
+    padding: 0 5rem;
   }
 }
+/*# sourceMappingURL=App.css.map */
