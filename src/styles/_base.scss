@@ -9,4 +9,10 @@
 a:focus {
   outline: none;
   color: $brown !important;
+  transition: 300ms color ease;
+}
+
+a:hover {
+  color: $brown !important;
+  transition: 300ms color ease;
 }

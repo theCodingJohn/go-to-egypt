@@ -18,6 +18,14 @@
 
   .col2 {
     display: none;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      opacity: 0.8;
+    }
   }
 
   .logo {
@@ -88,10 +96,44 @@
 @media (min-width: $m) {
   .header {
     background-position: center;
+
+    .button {
+      display: none;
+    }
   }
 
   .nav {
     height: 7rem;
     padding: 0 5rem;
+
+    .col2 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-grow: 1;
+    }
+
+    .link-wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(5.2rem, 8.2rem));
+      justify-content: end;
+      justify-items: end;
+      margin-right: 1.3rem;
+    }
+  }
+}
+
+@media (min-width: $l) {
+  .header {
+    .button {
+      display: block;
+    }
+  }
+
+  .nav {
+    .link-wrapper {
+      margin-left: 4.5rem;
+      margin-right: 7rem;
+    }
   }
 }

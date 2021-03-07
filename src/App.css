@@ -359,6 +359,7 @@ html {
 }
 
 body {
+  font-family: "Freight", sans-serif;
   color: #fefefe;
 }
 
@@ -373,6 +374,14 @@ body {
 a:focus {
   outline: none;
   color: #ad764a !important;
+  -webkit-transition: 300ms color ease;
+  transition: 300ms color ease;
+}
+
+a:hover {
+  color: #ad764a !important;
+  -webkit-transition: 300ms color ease;
+  transition: 300ms color ease;
 }
 
 .hero {
@@ -669,6 +678,14 @@ a:focus {
   display: none;
 }
 
+.nav .col2 a {
+  color: #fefefe;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
 .nav .logo {
   font-size: 1.8rem;
   font-family: "Core Sans G Rounded";
@@ -744,9 +761,47 @@ a:focus {
   .header {
     background-position: center;
   }
+  .header .button {
+    display: none;
+  }
   .nav {
     height: 7rem;
     padding: 0 5rem;
+  }
+  .nav .col2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .nav .link-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(5.2rem, 8.2rem))[5];
+        grid-template-columns: repeat(5, minmax(5.2rem, 8.2rem));
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    justify-items: end;
+    margin-right: 1.3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .header .button {
+    display: block;
+  }
+  .nav .link-wrapper {
+    margin-left: 4.5rem;
+    margin-right: 7rem;
   }
 }
 /*# sourceMappingURL=App.css.map */
