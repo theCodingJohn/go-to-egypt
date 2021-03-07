@@ -453,6 +453,20 @@ body {
           align-items: center;
 }
 
+.nav .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.nav .col2 {
+  display: none;
+}
+
 .nav .logo {
   font-size: 1.8rem;
   font-family: "Core Sans G Rounded";
@@ -462,6 +476,66 @@ body {
 .nav .logo .white {
   position: relative;
   left: 0.3rem;
+}
+
+.nav .button {
+  position: relative;
+  cursor: pointer;
+  height: 1.8rem;
+  width: 1.8rem;
+  background: transparent;
+  border: none;
+  -webkit-transition: 200ms background ease-out, 200ms -webkit-box-shadow ease-out;
+  transition: 200ms background ease-out, 200ms -webkit-box-shadow ease-out;
+  transition: 200ms box-shadow ease-out, 200ms background ease-out;
+  transition: 200ms box-shadow ease-out, 200ms background ease-out, 200ms -webkit-box-shadow ease-out;
+}
+
+.nav .button:focus {
+  outline: none;
+  -webkit-box-shadow: 1px 1px 20px #ad764a;
+          box-shadow: 1px 1px 20px #ad764a;
+  background: rgba(173, 118, 74, 0.4);
+  -webkit-transition: 200ms background ease-in, 200ms -webkit-box-shadow ease-in;
+  transition: 200ms background ease-in, 200ms -webkit-box-shadow ease-in;
+  transition: 200ms box-shadow ease-in, 200ms background ease-in;
+  transition: 200ms box-shadow ease-in, 200ms background ease-in, 200ms -webkit-box-shadow ease-in;
+}
+
+.nav .circle {
+  position: absolute;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background-color: #ad764a;
+}
+
+.nav .circle-left {
+  left: 0;
+}
+
+.nav .circle-center-hor {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.nav .circle-center-ver {
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.nav .circle-right {
+  right: 0;
+}
+
+.nav .circle-top {
+  top: 0;
+}
+
+.nav .circle-bottom {
+  bottom: 0;
 }
 
 @media (min-width: 768px) {

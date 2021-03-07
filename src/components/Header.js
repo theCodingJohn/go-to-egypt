@@ -13,6 +13,20 @@ const Header = () => {
               <span className="brown">EGYPT</span>
             </h3>
           </div>
+          <div className="col col2"></div>
+          <div className="col col3">
+            <button className="button">
+              <div className="circle circle-left circle-top"></div>
+              <div className="circle circle-left circle-center-hor"></div>
+              <div className="circle circle-left circle-bottom"></div>
+              <div className="circle circle-center-ver circle-top"></div>
+              <div className="circle circle-center-ver circle-center-hor"></div>
+              <div className="circle circle-center-ver circle-bottom"></div>
+              <div className="circle circle-right circle-top"></div>
+              <div className="circle circle-right circle-center-hor"></div>
+              <div className="circle circle-right circle-bottom"></div>
+            </button>
+          </div>
         </div>
       </nav>
       <Hero />
