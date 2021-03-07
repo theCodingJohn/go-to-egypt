@@ -5,3 +5,8 @@
 .white {
   color: $white;
 }
+
+a:focus {
+  outline: none;
+  color: $brown !important;
+}
