@@ -1,9 +1,25 @@
+body {
+  background: #d8b188;
+}
+
 .brown {
   color: $brown;
 }
 
 .white {
   color: $white;
+}
+
+.black {
+  color: $black;
+}
+
+.sub-heading {
+  font-family: "Aribau Grotesk";
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
 }
 
 a:focus {

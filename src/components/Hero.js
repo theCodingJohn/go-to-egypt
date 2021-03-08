@@ -6,7 +6,9 @@ const Hero = () => {
       <div className="row">
         <div className="col">
           <div className="text-wrapper">
-            <span className="brown ancient-world">the ancient world</span>
+            <span className="brown ancient-world sub-heading">
+              the ancient world
+            </span>
             <h1>
               Discover the awe<span className="dash"> &#8212; </span>inspiring{" "}
               <br className="line-break"></br>Pyramids of Giza and ancient

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header } from "./components";
+import { Header, EgyptianCivilization } from "./components";
 
 // style
 import "./App.css";
@@ -9,7 +9,10 @@ const App = () => {
   return (
     <>
       <Header />
-      <main></main>
+      <main>
+        <EgyptianCivilization />
+        <div className="test"></div>
+      </main>
     </>
   );
 };

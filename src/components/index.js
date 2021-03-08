@@ -1,3 +1,5 @@
 import Hero from "./Hero";
 import Header from "./Header";
-export { Hero, Header };
+import EgyptianCivilization from "./EgyptianCivilization";
+
+export { Hero, Header, EgyptianCivilization };

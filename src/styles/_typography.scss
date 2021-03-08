@@ -18,3 +18,28 @@ body {
   font-family: "Freight", sans-serif;
   color: $white;
 }
+
+h2 {
+  font-size: 2.187rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+@media (min-width: $m) {
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: $l) {
+  p {
+    font-size: 1.4rem;
+  }
+}
