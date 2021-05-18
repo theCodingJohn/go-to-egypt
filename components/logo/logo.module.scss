@@ -1,0 +1,17 @@
+@import "/styles/variables";
+
+.logo {
+  font-size: 1.8rem;
+  font-family: "Core Sans G Rounded";
+  font-weight: 800;
+
+  .white {
+    position: relative;
+    left: 0.3rem;
+    color: $white;
+  }
+
+  .brown {
+    color: $brown;
+  }
+}

@@ -1,0 +1,62 @@
+@import "/styles/mixins";
+@import "/styles/variables";
+
+.header {
+  height: calc(100vh + 22rem);
+  background: url(../../public/img/background.png) no-repeat top;
+  background-size: cover;
+
+  @include mediumScreen() {
+    background-position: center;
+  }
+}
+
+.nav {
+  padding: 0 1.875rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+
+  @include mediumScreen() {
+    height: 7rem;
+    padding: 0 5rem;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.links_container {
+  display: none;
+
+  @include mediumScreen() {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+}
+
+.links_wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(5.2rem, 8.2rem));
+  justify-content: end;
+  justify-items: end;
+  margin-right: 1.3rem;
+
+  @include largeScreen() {
+    margin-left: 3rem;
+    margin-right: 7rem;
+  }
+}
