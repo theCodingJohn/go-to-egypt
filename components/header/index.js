@@ -1,7 +1,8 @@
 import styles from "./header.module.scss";
 
-import MenuButton from "../menu";
-import Logo from "../logo";
+import MenuButton from "../Menu";
+import Logo from "../Logo";
+import Hero from "../Hero";
 
 const index = () => {
   return (
@@ -35,6 +36,7 @@ const index = () => {
           </div>
         </div>
       </nav>
+      <Hero />
     </header>
   );
 };
