@@ -1,0 +1,63 @@
+@import "./resets";
+@import "./fonts";
+@import "./variables";
+@import "./mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  @media (min-width: $m) {
+    font-size: 17px;
+  }
+  @media (min-width: $l) {
+    font-size: 18px;
+  }
+  @media (min-width: $xl) {
+    font-size: 20px;
+  }
+  @media (min-width: $xxl) {
+    font-size: 24px;
+  }
+}
+
+body {
+  font-family: "Freight", sans-serif;
+  color: $white;
+  background: #d8b188;
+}
+
+h2 {
+  font-size: 2.187rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-weight: 300;
+
+  @include mediumScreen() {
+    font-size: 1.3rem;
+  }
+
+  @include largeScreen() {
+    font-size: 1.4rem;
+  }
+}
+
+a:focus {
+  outline: none;
+  color: $brown !important;
+  transition: 300ms color ease;
+}
+
+a:hover {
+  color: $brown !important;
+  transition: 300ms color ease;
+}
