@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "../components/header";
+import Header from "../components/Header";
 import Civilization from "../components/Civilization";
 import Facts from "../components/Facts";
 

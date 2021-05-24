@@ -1,0 +1,67 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.circle {
+  position: absolute;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background-color: $brown;
+}
+
+.circle_left {
+  left: 0;
+}
+
+.circle_center_hor {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.circle_center_ver {
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.circle_center_top {
+  top: 0;
+}
+
+.circle_right {
+  right: 0;
+}
+
+.circle_top {
+  top: 0;
+}
+
+.circle_bottom {
+  bottom: 0;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  height: 1.8rem;
+  width: 1.8rem;
+  background: transparent;
+  border: none;
+  transition: 200ms box-shadow ease-out, 200ms background ease-out;
+
+  @include mediumScreen() {
+    display: none;
+  }
+
+  @include largeScreen() {
+    display: block;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 1px 1px 20px $brown;
+    background: rgba($color: $brown, $alpha: 0.4);
+    transition: 200ms box-shadow ease-in, 200ms background ease-in;
+  }
+}
